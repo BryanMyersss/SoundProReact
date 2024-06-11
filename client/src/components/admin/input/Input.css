@@ -1,0 +1,87 @@
+.inputGroup {
+  font-family: var(--font-inter);
+  position: relative;
+}
+
+.inputGroup input {
+  font-family: var(--font-inter);
+  color: var(--font-primary);
+  font-size: 16px;
+  text-indent: 16px;
+  height: 44px;
+  outline: none;
+  border: 1px solid var(--input-unactive-border-color);
+  background-color: transparent;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-size: 16px;
+  position: absolute;
+  padding: 0em 0.2em;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 16px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  color: var(--input-unactive-font-color);
+}
+
+.inputGroup :is(input:focus, input.notEmpty)~label {
+  top: 0%;
+  font-size: 13px;
+  margin-left: 28px;
+  background-color: #ffffff;
+  color: var(--input-unactive-font-color);
+}
+
+
+.inputGroup :is(input:focus, input.notEmpty) {
+  border-color: var(--input-active-border-color);
+}
+
+.inputGroup-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  fill: var(--font-primary);
+  cursor: pointer;
+}
+
+/* Date picker styles */
+
+.inputGroup.date label  {
+  top: 0%;
+  font-size: 13px;
+  margin-left: 28px;
+  background-color: #ffffff;
+  color: var(--input-unactive-font-color);
+}
+
+.inputGroup input[type="date"] {
+  padding-right: 16px;
+  text-indent: 10px;
+  height: 50px;
+}
+
+@-moz-document url-prefix() {
+  .inputGroup input[type="date"] {
+    text-indent: 16px;
+  }
+}
+
+
+.inputGroup input[type="date"]::-webkit-calendar-picker-indicator  {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

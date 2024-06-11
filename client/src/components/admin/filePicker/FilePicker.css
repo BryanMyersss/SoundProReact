@@ -1,0 +1,51 @@
+.filePicker input[type="file"] {
+  display: none;
+}
+
+.filePicker {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  outline: 1px solid var(--border-color);
+  border-radius: 5px;
+  outline-offset: -1px;
+  height: 44px;
+}
+
+.filePicker.has-image {
+  outline-color: var(--input-active-border-color);
+}
+
+.filePicker-label {
+  font-size: 16px;
+  position: absolute;
+  padding: 0em 0.2em;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 16px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  color: var(--input-unactive-font-color);
+}
+
+.filePicker-labelBox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  text-indent: 19px;
+}
+
+.filePicker-label.has-image {
+  top: 0%;
+  font-size: 13px;
+  margin-left: 28px;
+  background-color: #ffffff;
+  color: var(--input-unactive-font-color);
+}

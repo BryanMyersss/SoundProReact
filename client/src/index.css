@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-outfit: 'Outfit', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --brand-color: #2E2E2E;
+  --font-primary: #232323;
+
+
+  --input-unactive-font-color: #757575;
+  --input-active-font-color: var(--font-primary);
+  --input-unactive-border-color: var(--border-color);
+  --input-active-border-color: #b9b9b9;
+
+
+  --error-color: #FF3434;
+  --link-color: #007EF2;
+  --border-color: #DDDDDD;
+  --button-secondary: #888888;
+  --box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+.hoverable:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.hidden {
+  display: none;
+}
+
+.canBeDarkened::after  {
+  position: relative;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;  
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.1s ease;
+}
+
+.darkened.canBeDarkened::after {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.loading {
+  position: relative;
+}
+
+.loading::before {
+  z-index: 3;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+.loading::after {
+  z-index: 4;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  color: var(--font-primary);
+}
+
+body {
+  background: #F5F5F5;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+img {
+  object-fit: contain;
+}
+
+
+
+/* @media screen and (max-width: 700px) {
+  .section__padding {
+    padding: 4rem;
+  }
+  .section__margin {
+    margin: 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section__padding {
+    padding: 4rem 2rem;
+  }
+  .section__margin {
+    margin: 4rem 2rem;
+  }
+} */

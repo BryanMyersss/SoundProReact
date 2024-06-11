@@ -1,0 +1,9 @@
+.auto-resize-input {
+  font-family: var(--font-inter);
+  color: var(--font-primary);
+  font-weight: 600;
+  font-size: 15px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

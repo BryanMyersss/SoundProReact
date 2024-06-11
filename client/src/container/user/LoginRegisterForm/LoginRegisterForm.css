@@ -1,0 +1,71 @@
+.LRform {
+  display: flex;
+  font-family: var(--font-inter);
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  width: 400px;
+  /* height: 800px; */
+  background-color: #FFF;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.LRform-title {
+  font-size: 22px;
+  margin-bottom: 32px;
+  font-weight: 700;
+}
+
+.LRform-login-error {
+  margin-top: -16px;
+  margin-bottom: 20px;
+}
+
+.LRform-input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  gap: 16px;
+}
+
+.LRform .inputGroup {
+  align-self: stretch;
+}
+
+.LRform-submit {
+  font-family: var(--font-inter);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+
+  height: 40px;
+  width: 100%;
+  margin-top: 40px;
+  background-color: var(--brand-color);
+  color: #FFF;
+
+  outline: none;
+  border: none;
+  border-radius: 55px;
+
+  cursor: pointer;
+}
+
+.LRform-toggle {
+  margin-top: 18px;
+}
+.LRform-toggle-button {
+  color: var(--link-color);
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 0.5em;
+}
+
+.LRform-input-error {
+  color: var(--error-color);
+  font-size: 13px;
+  margin-top: -6px;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,47 @@
+.AiCreator {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 344px;
+  flex: 1;
+}
+
+.AiCreator_title {
+  color: var(--font-primary);
+  font-size: 20px;
+  text-align: center;
+}
+
+.AiCreator_title b:first-of-type {
+  border-bottom: 1px solid var(--font-primary);
+}
+
+.AiCreator_title b:last-of-type {
+  color: #10A37F;
+}
+
+.AiCreator .textArea:first-of-type textarea {
+  height: 450px;
+}
+
+.AiCreator .textArea:last-of-type textarea {
+  height: 138px;
+}
+
+.AiCreator_end-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.AiCreator_button {
+  background-color: #10A37F;
+  padding: 0 18px;
+  margin: 0;
+  outline: none;
+  border: none;
+  
+  height: 44px;
+  border-radius: 6px;
+  cursor: pointer;
+}

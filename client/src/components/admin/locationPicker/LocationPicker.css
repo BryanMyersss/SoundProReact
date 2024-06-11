@@ -1,0 +1,203 @@
+.locationPicker {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  outline: 1px solid var(--border-color);
+  border-radius: 5px;
+  outline-offset: -1px;
+  height: 94px;
+  cursor: pointer;
+}
+
+.locationPicker.has-location {
+  outline-color: var(--input-active-border-color);
+}
+
+.locationPicker.open {
+  border-radius: 5px 5px 0 0;
+  outline-color: var(--input-active-border-color);
+}
+
+.locationPicker_input-overflow {
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.locationPicker_input-container {
+  position: relative;
+  height: 40px;
+  width: auto;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+}
+
+.locationPicker.closed.has-location:hover .locationPicker_input-container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.locationPicker.closed.has-location .locationPicker_input-container {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.locationPicker label {
+  font-size: 16px;
+  position: absolute;
+  padding: 0em 0.2em;
+  left: 0;
+  top: 0;
+  margin-left: 16px;
+  margin-top: 9px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  color: var(--input-unactive-font-color);
+}
+
+.locationPicker.has-location label,
+.locationPicker.open label {
+  font-size: 13px;
+  margin-left: 28px;
+  margin-top: -8px;
+  background-color: #ffffff;
+  color: var(--input-unactive-font-color);
+}
+
+.locationPicker_input {
+  font-family: var(--font-inter);
+  color: var(--font-primary);
+  font-size: 16px;
+  text-indent: 16px;
+  height: 40px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.locationPicker_input.open {
+  border-radius: 5px 5px 0 0;
+  border-color: var(--input-active-border-color);
+  border-bottom: 1px solid transparent;
+}
+
+.locationPicker_icon {
+  position: absolute;
+  top: 6px;
+  right: 18px;
+  width: 30px;
+  height: 30px;
+  fill: var(--font-primary);
+  cursor: pointer;
+  transition: fill 0.05s ease;
+}
+
+
+.locationPicker_icon.delete-icon.deletable {
+  fill: red;
+}
+
+.locationPicker_selected-container {
+  overflow: hidden;
+  position: absolute;
+  top: 42px;
+  left: 16px;
+  right: 16px;
+  bottom: 1px;
+  transition: top 0.3s ease;
+}
+
+.locationPicker_selected-container.open {
+  bottom: -23px;
+  z-index: 4;
+  overflow-y: auto;
+}
+
+.locationPicker.closed.has-location:hover .locationPicker_selected-container {
+  top: 42px;
+}
+
+.locationPicker.closed.has-location .locationPicker_selected-container {
+  top: 16px;
+}
+
+.locationPicker_selected-locations {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 8px;
+  column-gap: 8px;
+}
+
+.locationPicker_menu {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  width: 100%;
+  background-color: #FFF;
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  z-index: 1;
+  display: none;
+  height: 200px;
+}
+
+.locationPicker_menu.open {
+  display: block;
+  z-index: 3;
+  border-color: var(--input-active-border-color);
+}
+
+.locationPicker_menu hr {
+  margin: 0 12px;
+}
+
+.locationPicker .locationPicker_hr {
+  margin-top: 30px;
+}
+
+.locationPicker_menu-container {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 20px);
+  margin: 10px 0;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.locationPicker_menu-locations {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 16px;
+  padding-right: 8px;
+  flex-direction: row;
+  row-gap: 8px;
+  column-gap: 8px;
+}
+
+.locationPicker .product_location {
+  gap: 6px;
+}
+
+.product_location {
+  position: relative;
+}
+
+.product_location.deletable:hover::after { 
+  content: '-';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 30px;
+  color: #FFF;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-bottom: 2px;
+  background-color: rgba(255, 0, 0, 0.782);
+  border-radius: 20px;
+}

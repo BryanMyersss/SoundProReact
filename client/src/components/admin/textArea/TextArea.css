@@ -1,0 +1,44 @@
+.textArea {
+  font-family: var(--font-inter);
+  position: relative;
+}
+
+.textArea textarea {
+  font-family: var(--font-inter);
+  color: var(--font-primary);
+  font-size: 16px;
+  height: 40px;
+  outline: none;
+  border: 1px solid var(--input-unactive-border-color);
+  background-color: transparent;
+  border-radius: 5px;
+  width: 100%;
+  resize: none;
+  height: 120px;
+  padding: 8px 16px;
+}
+
+.textArea label {
+  font-size: 16px;
+  position: absolute;
+  padding: 0em 0.2em;
+  left: 0;
+  top: 0;
+  margin-left: 16px;
+  margin-top: 9px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  color: var(--input-unactive-font-color);
+}
+
+.textArea :is(textarea:focus, textarea:valid)~label {
+  font-size: 13px;
+  margin-left: 28px;
+  margin-top: -8px;
+  background-color: #ffffff;
+  color: var(--input-unactive-font-color);
+}
+
+.textArea :is(textarea:focus, textarea:valid) {
+  border-color: var(--input-active-border-color);
+}

@@ -1,0 +1,134 @@
+:root {
+  --navbar-height: 66px;
+}
+
+.navbar {
+  font-family: var(--font-outfit);
+
+  height: var(--navbar-height);
+  display: flex;
+  background-color: var(--brand-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar_logo {
+  max-height: 43px;
+}
+
+.navbar input[type="text"] {
+  font-family: var(--font-outfit);
+  font-size: 20px;
+  padding-bottom: 1px;
+
+  height: 40px;
+  width: 434px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  text-indent: 20px;
+
+  margin-left: 55px;
+}
+
+.navbar input[type="text"]::placeholder {
+  color: #A0A0A0;
+  opacity: 1; /* Firefox */
+} 
+
+.navbar_main-link {
+  margin-left: 30px;
+  color: #FFF;
+  font-size: 20px;
+
+  cursor: pointer;
+}
+.navbar_main-link:first-of-type {
+  margin-left: 35px;
+}
+
+.navbar_account {
+  font-family: var(--font-inter);
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  margin-left: 36px;
+  /* margin-top: 2px; */
+  height: var(--navbar-height);
+
+  cursor: pointer;
+}
+
+.navbar_account-icon {
+  aspect-ratio: 1;
+  height: 30px;
+}
+
+.navbar_account-text {
+  font-size: 13px;
+  margin-left: 8px;
+  font-weight: 300;
+  line-height: 120%;
+  letter-spacing: 0.24px;
+}
+
+.navbar_account-text b ,
+.navbar_account-text p {
+  color: #FFF;
+} 
+
+.navbar_account-text b { 
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.navbar_account-text-dropdownIcon {
+  fill: #d7ffb7;
+  margin-left: 2px;
+  height: 16px;
+  width: 16px;
+  transform: scale(1.4);
+}
+
+.navbar_shopping-cart {
+  margin-left: 23px;
+  cursor: pointer;
+}
+
+.navbar_account-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  
+  top: var(--navbar-height);
+  left: 50%;
+  transform: translateX(-50%);
+  
+  color: var(--font-primary);
+  font-size: 18px;
+  font-weight: 500;
+  gap: 8px;
+
+  width: 200px;
+  padding: 20px 0;
+  background-color: #FFF;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  cursor: default;
+  z-index: 3;
+}
+
+.navbar_account-dropdown.closed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navbar_account-dropdown span,
+.navbar_account-dropdown a {
+  color: var(--font-primary);
+  cursor: pointer;
+}

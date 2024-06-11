@@ -1,0 +1,120 @@
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.dropdown input {
+  font-family: var(--font-inter);
+  color: var(--font-primary);
+  font-size: 16px;
+  text-indent: 16px;
+  height: 44px;
+  outline: none;
+  border: 1px solid var(--input-unactive-border-color);
+  background-color: transparent;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.dropdown label {
+  font-size: 16px;
+  position: absolute;
+  padding: 0em 0.2em;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 16px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  color: var(--input-unactive-font-color);
+}
+
+.dropdown input.open {
+  border-radius: 5px 5px 0 0;
+  border-color: var(--input-active-border-color);
+  border-bottom: 1px solid transparent;
+}
+
+.dropdown :is(input:focus, input:valid)~label,
+.dropdown.open label {
+  top: 0%;
+  font-size: 13px;
+  margin-left: 28px;
+  background-color: #ffffff;
+  color: var(--input-unactive-font-color);
+}
+
+
+.dropdown_icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  fill: var(--font-primary);
+  cursor: pointer;
+}
+.dropdown_icon.hidden { 
+  display: none;
+}
+
+.dropdown_menu {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  width: 100%;
+  background-color: #FFF;
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  z-index: 1;
+  display: none;
+  height: 200px;
+}
+
+.dropdown_menu.open {
+  display: block;
+  z-index: 5;
+  border-color: var(--input-active-border-color);
+}
+
+.dropdown_menu hr {
+  margin: 0 12px;
+}
+
+.dropdown_menu-container {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 20px);
+  margin: 10px 0;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.dropdown_menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 18px;
+  list-style: none;
+  padding-left: 16px;
+  padding-right: 8px;
+}
+
+.dropdown_menu ul li {
+  height: 20px;
+  text-wrap: nowrap;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--font-primary);
+  cursor: pointer;
+}
+
+.dropdown_menu ul li:hover {
+  color: var(--font-primary);
+}
+.dropdown_menu ul li::first-letter {
+  font-weight: 600;
+}

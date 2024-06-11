@@ -1,0 +1,58 @@
+.productForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  width: 382px;
+  min-height: 200px;
+}
+
+.productForm_tabs {
+  display: flex;
+  background-color: var(--border-color);
+  border-radius: 6px 6px 0 0;
+  gap: 1px;
+}
+
+.productForm_tabs button {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  
+  height: 48px;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-weight: 700;
+  color: #8F8F8F;
+
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  
+  background: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+.productForm_tabs button:first-of-type { 
+  border-radius: 5px 0 0 0;
+}
+.productForm_tabs button:last-of-type { 
+  border-radius: 0 5px 0 0;
+}
+.productForm_tabs button.selected {
+  border-bottom: 1px solid #fff;
+}
+
+.productForm_tab-spacing {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  padding: 20px;
+}
+
+.productForm_maintab-price-container {
+  display: flex;
+  gap: 10px;  
+}

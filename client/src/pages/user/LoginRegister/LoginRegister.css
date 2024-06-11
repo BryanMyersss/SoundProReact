@@ -1,0 +1,6 @@
+.LR_container {
+  min-height: calc(100svh - var(--navbar-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

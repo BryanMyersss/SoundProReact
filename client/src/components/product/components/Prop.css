@@ -1,0 +1,67 @@
+.product_prop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 28px;
+  background-color: #B2FF97;
+  padding: 0 8px;
+  border-radius: 3px;
+  gap: 5px;
+
+  font-family: var(--font-inter);
+  font-size: 15px;
+  color: var(--font-primary);
+  cursor: default;
+}
+
+.product_prop.deletable,
+.product_prop.clickable {
+  cursor: pointer;
+}
+
+.product_prop.deletable:hover::after { 
+  content: '-';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 30px;
+  color: #FFF;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 0, 0, 0.782);
+  border-radius: 3px;
+}
+
+.product_prop img {
+  height: 20px;
+  margin-right: 2px;
+  aspect-ratio: 1/1;
+  fill: var(--font-primary);
+}
+
+.product_prop-label {
+  font-weight: 700;
+}
+
+.product_prop-text {
+  font-weight: 600;
+}
+
+.product_prop-text.placeholder { 
+  color: var(--input-unactive-font-color);
+}
+
+.product_prop-input {
+  display: flex;
+  flex-grow: 0;
+  height: 28px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  resize: horizontal; 
+}
+
